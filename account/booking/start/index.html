@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Basic Page Needs
+         ================================================== -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- Specific Meta
+         ================================================== -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <meta name="description" content="Grand Ride Car Rent Service" />
+      <meta name="keywords" content="Car Rent" />
+      <meta name="author" content="" />
+      <!-- Titles
+         ================================================== -->
+      <title>Grand Ride Car Rent Service</title>
+      {globLinks}
+	  <style>
+		/*.d-none{
+			display: none;
+		}*/
+		
+		input[type="checkbox"]{
+			width: 20px;
+			margin-right: 10px;
+		}
+		.lbl2{
+			font-size: 22px !important;
+		}
+		.is-invalid{
+			border: 2px solid red !important;
+		}
+	  </style>
+   </head>
+   <body>
+      {header}
+      <div class="page-header nevy-bg">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h2 class="page-title page_tiltle_heading">Checkout Page</h2>
+               </div>
+               <!-- /.col-md-12 -->
+            </div>
+            <!-- /.row-->
+         </div>
+         <!-- /.container-fluid -->
+      </div>
+      <div class="check_out_page_top">
+         <div class="container">
+			<input required type="hidden" value="1" id="currMenu" />
+			<input required type="hidden" value="3" id="finalChap" />
+			<form method="post" action="" id="mainFormId">
+			
+				<div class="row" id="part1">
+					<div class="row checkout_page">
+					   <div class="col-md-12">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label>Booking Id</label>
+								<input name="temp_booking_id" type="text" value="#{temp_id}" class="form-control" placeholder="Enter Booking Id" readonly>
+								<input name="booking_id" type="hidden" value="{booking_id}">
+							 </div>
+						  </div>
+					   </div>
+					</div>
+					<div class="row checkout_page">
+					   <div class="col-md-6">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label>Start Km reading</label>
+								<input required name="start_km_reading" type="number" class="form-control" placeholder="Enter Start Km reading">
+							 </div>
+						  </div>
+					   </div>
+					   <div class="col-md-6">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label>Start Fuel reading</label>
+								<input required name="start_fuel_reading" type="number" class="form-control" placeholder="Enter Start Fuel reading">
+							 </div>
+						  </div>
+					   </div>
+					</div>
+					<div class="row checkout_page">
+					   <div class="col-md-10">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label class="lbl2">Documents and Device </label>
+								<ul>
+								   <li>
+									  <div class="checkout_page_inner_radio">
+										 <span>&nbsp;</span>
+										 <span>Working</span>
+										 <span>Not working </span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 RC 
+										 </span>
+										 <span><input required name="rc" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="rc" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Insurance 	
+										 </span>
+										 <span><input required name="insurance" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="insurance" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Pollution 	
+										 </span>
+										 <span><input required name="pollution" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="pollution" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Mobile charger 	
+										 </span>
+										 <span><input required name="mobile_charger" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="mobile_charger" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+								   </li>
+								</ul>
+							 </div>
+						  </div>
+					   </div>
+					</div>
+					
+					<div class="row checkout_page my-1">
+					   <div class="col-md-10">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label class="lbl2">All Check Carefully</label>
+								<ul>
+								   <li>
+									  <div class="checkout_page_inner_radio">
+										 <span>&nbsp;</span>
+										 <span>Available</span>
+										 <span>Not Available </span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 📣 Horn 
+										 </span>
+										 <span><input required name="horn" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="horn" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 🧹 Wiper 	
+										 </span>
+										 <span><input required name="wiper" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="wiper" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 ❄ Ac/Heater 	
+										 </span>
+										 <span><input required name="ac_heater" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="ac_heater" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 💡 Head Light 	
+										 </span>
+										 <span><input required name="head_light" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="head_light" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 ⭕ Tail Lights 	
+										 </span>
+										 <span><input required name="tail_light" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="tail_light" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 🎵 Music system 	
+										 </span>
+										 <span><input required name="music_system" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="music_system" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 ⛓ All seats belts 	
+										 </span>
+										 <span><input required name="seat_belts" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="seat_belts" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 🔧 Tool kit 	
+										 </span>
+										 <span><input required name="tool_kit" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="tool_kit" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 🛠 Jack 	
+										 </span>
+										 <span><input required name="jack" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="jack" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+								   </li>
+								</ul>
+							 </div>
+						  </div>
+					   </div>
+					</div>
+				</div>
+			
+				<div class="row d-none" id="part2">
+					
+					<div class="row checkout_page">
+					   <div class="col-md-6">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label class="lbl2">Check all tyres condition</label>
+								<ul>
+								   <li>
+									  <div class="checkout_page_inner_radio">
+										 <span>&nbsp;</span>
+										 <span>Good Grip</span>
+										 <span>Medium Grip</span>
+										 <span>Bad Condition</span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Right side front 
+										 </span>
+										 <span><input required name="right_side_front" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="right_side_front" class="form-check-input" type="radio"  id="" value="2"></span>
+										 <span><input required name="right_side_front" class="form-check-input" type="radio"  id="" value="3"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Left side front 	
+										 </span>
+										 <span><input required name="left_side_front" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="left_side_front" class="form-check-input" type="radio"  id="" value="2"></span>
+										 <span><input required name="left_side_front" class="form-check-input" type="radio"  id="" value="3"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Left side rear 	
+										 </span>
+										 <span><input required name="left_side_rear" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="left_side_rear" class="form-check-input" type="radio"  id="" value="2"></span>
+										 <span><input required name="left_side_rear" class="form-check-input" type="radio"  id="" value="3"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Right side rear 	
+										 </span>
+										 <span><input required name="right_side_rear" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="right_side_rear" class="form-check-input" type="radio"  id="" value="2"></span>
+										 <span><input required name="right_side_rear" class="form-check-input" type="radio"  id="" value="3"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Spare tyre 	
+										 </span>
+										 <span><input required name="spare_tyre" class="form-check-input" type="radio"  id="" value="1" > </span> 
+										 <span><input required name="spare_tyre" class="form-check-input" type="radio"  id="" value="2"></span>
+										 <span><input required name="spare_tyre" class="form-check-input" type="radio"  id="" value="3"></span>
+									  </div>
+								   </li>
+								</ul>
+							 </div>
+						  </div>
+					   </div>
+					</div>
+				</div>
+			
+				<div class="row d-none" id="part3">
+					
+					<div class="row checkout_page">
+					   <div class="col-md-6">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label class="lbl2">Vehicle condition </label>
+								<ul>
+								   <li>
+									  <div class="checkout_page_inner_radio">
+										 <span>&nbsp;</span>
+										 <span>Yes</span>
+										 <span>No </span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Clean inside 
+										 </span>
+										 <span><input required name="clean_inside" class="form-check-input" type="radio"  id="" value="1"> </span> 
+										 <span><input required name="clean_inside" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+									  <div class="checkout_page_inner_radio form-check">
+										 <span class="form-check-label" for="">
+										 Clean outside 	
+										 </span>
+										 <span><input required name="clean_outside" class="form-check-input" type="radio"  id="" value="1"> </span> 
+										 <span><input required name="clean_outside" class="form-check-input" type="radio"  id="" value="0"></span>
+									  </div>
+								   </li>
+								</ul>
+							 </div>
+						  </div>
+					   </div>
+					</div>
+				</div>
+				
+				<div class="row" id="">
+					<div class="row checkout_page">
+					   <div class="col-md-6">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label class="lbl2">Rest amount</label>
+								<ul>
+								   <li>
+									  <div class="checkout_page_inner_radio">
+										<label>Your pending amount</label>
+										<input required name="pending_amount" type="text" value="#{temp_id}" class="form-control" placeholder="Enter Booking Id" disabled>
+									  </div>
+								   </li>
+								</ul>
+							 </div>
+						  </div>
+					   </div>
+					</div>
+				</div>
+				
+				<div class="row" id="">
+					<div class="row checkout_page">
+					   <div class="col-md-6">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label class="lbl2">Add Fastag balance</label>
+								<ul>
+								   <li>
+									  <div class="checkout_page_inner_radio">
+										<label>Minimum Fastag balance add - 500</label>
+										<input required name="fastag_balance" type="number" class="form-control" placeholder="Enter Fastag balance">
+									  </div>
+								   </li>
+								</ul>
+							 </div>
+						  </div>
+					   </div>
+					</div>
+				</div>
+				
+				<div class="row" id="">
+					<div class="row checkout_page">
+					   <div class="col-md-6">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label class="lbl2">Please take a video of the car from outside</label>
+								<ul>
+								   <li>
+									  <div class="checkout_page_inner_radio">
+										<label>Your pending amount</label>
+										<select class="form-control" name="outside_car_video" required>
+											<option value="" selected>Choose One</option>
+											<option value="1">Yes</option>
+											<option value="0">No</option>
+										</select>
+									  </div>
+								   </li>
+								</ul>
+							 </div>
+						  </div>
+					   </div>
+					</div>
+				</div>
+				
+				<div class="row" id="">
+					<div class="row checkout_page">
+					   <div class="col-md-6">
+						  <div class="checkout_page_inner">
+							 <div class="form-group">
+								<label class="lbl2">Driving Instructions and Fine Charge</label>
+								<ul>
+								   <li>
+									  <div class="checkout_page_inner_radio">
+										<label>Please follow the bellow instructions. This guide is designed for your safety</label>
+									  </div>
+								   </li>
+									  <div class="checkout_page_inner_radio">
+										<input required name="drinking" type="checkbox" class="form-control">वाहन में धूम्रपान, शराब या पालतू जानवरों की अनुमति नहीं है।
+									  </div>
+								   </li>
+									  <div class="checkout_page_inner_radio">
+										<input required name="traffic_rules" type="checkbox" class="form-control">यातायात नियम और वाहन की गति सीमा जो 100-110 किमी/घंटा निर्धारित है
+									  </div>
+								   </li>
+									  <div class="checkout_page_inner_radio">
+										<input required name="offroad" type="checkbox" class="form-control">यह वाहन ऑफ-रोडिंग के लिए नहीं है, ओवरस्पीडिंग करने पर जुर्माना 1k -10k तक हो सकता है।
+									  </div>
+								   </li>
+								</ul>
+							 </div>
+						  </div>
+					   </div>
+					</div>
+				</div>
+				
+				
+			</form>
+			
+            <div class="row checkout_page">
+               <div class="col-md-12">
+                  <div class="checkout_page_inner checkout_page_btn">
+                     <!--<a href="javascript:void(0)" class="btn btn-primary d-none" id="prevButton">
+                     Back
+                     </a>
+                     <a href="javascript:void(0)" class="btn btn-primary" id="nextButton">
+                     Next
+                     </a>-->
+                     <a href="javascript:void(0)" onclick="$('#mainFormId').submit();" class="btn btn-success d-none" id="finalSubmit">
+                     Submit
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {footer}
+      {globalScripts}
+	  <script src="index.js"></script>
+   </body>
+</html>

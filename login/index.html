@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+    ================================================== -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Specific Meta
+
+  ================================================== -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta name="description" content="Grand Ride Car Rent Service" />
+
+  <meta name="keywords" content="Car Rent" />
+
+  <meta name="author" content="" />
+
+
+
+  <!-- Titles
+
+    ================================================== -->
+
+  <title>Grand Ride Car Rent Service | Login</title>
+
+
+
+  <!-- Favicons
+
+    ================================================== -->
+
+  <link rel="shortcut icon" href="/tripeasy/assets/images/favicon.ico" />
+
+  <link rel="apple-touch-icon" href="/tripeasy/assets/images/apple-touch-icon.png" />
+
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+
+
+
+  <!-- Custom Font
+
+    ================================================== -->
+
+  <link
+
+    href="https://fonts.googleapis.com/css?family=Exo:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7cRoboto+Slab:400,700"
+
+    rel="stylesheet" />
+
+
+
+  <!-- CSS
+
+    ================================================== -->
+
+  <link rel="stylesheet" href="/tripeasy/assets/css/plugins.min.css" />
+
+  <link rel="stylesheet" href="/tripeasy/assets/css/icons.min.css" />
+
+  <link rel="stylesheet" href="/tripeasy/assets/css/style.css" />
+
+  <link rel="stylesheet" href="/tripeasy/assets/css/color-schemer.css" />
+
+
+
+  <!-- RS5.4 Main Stylesheet -->
+
+  <link rel="stylesheet" type="text/css" href="/tripeasy/assets/revolution/css/settings.css" />
+
+  <link rel="stylesheet" type="text/css" href="/tripeasy/assets/revolution/css/settings.css" />
+
+  <link rel="stylesheet" type="text/css" href="/tripeasy/assets/css/animate.css" />
+
+  <link rel="stylesheet" type="text/css" href="/tripeasy/assets/css/owl.carousel.min.css" />
+
+  <!-- RS5.4 Layers and Navigation Styles -->
+
+  <link rel="stylesheet" type="text/css" href="/tripeasy/assets/revolution/css/layers.css" />
+
+  <link rel="stylesheet" type="text/css" href="/tripeasy/assets/revolution/css/navigation.css" />
+
+
+  
+</head>
+
+
+
+<body>
+ <style>
+
+.login_section {
+  background-color: #fff;
+  box-shadow: 0 4px 24px rgb(57 56 56 / 25%);
+  margin:60px auto;
+  padding:20px 15px;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.login_section h3 {
+  font-weight: 600;
+  margin: 0 0px 5px;
+}
+.login_section p {
+    margin-bottom: 10px;
+}
+.login_section .form-group label {
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.login_section .form-group .form-control {
+    padding: 15px 10px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.login_section .form-group .btn {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    padding: 12px 0;
+}
+.login-or {
+    color: #828282;
+    margin: 20px auto;
+    padding: 20px 0;
+    position: relative;
+    max-width: 385px;
+}
+ .or-line {
+    background-color: #edecf8;
+    height: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: block;
+}
+ .span-or-log {
+    background-color: #fff;
+    color: #828282;
+    display: block;
+    left: 25%;
+    position: absolute;
+    text-align: center;
+    top: 6px;
+    width: 200px;
+}
+.social-login a {
+    background: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    box-shadow: inset 0 0 0 0 #fff;
+    text-align: center;
+    margin: 0 0 15px;
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: #28283c;
+    border-radius: 4px;
+   display:flex;
+   align-items: center;
+   justify-content:center;
+   }
+.login-wrapper .loginbox .login-auth .social-login span {
+    color: #828282;
+    margin-right: 8px;
+    display: inline-flex;
+}
+.social-login a span {
+    display: inline-flex;
+}
+.social-login a svg {
+    width: 22px;
+    height: 22px;
+    fill: #ffa633;
+    margin-right:10px
+}
+@media (min-width:767px) {
+   .login_section{
+    max-width: 635px;
+  }
+  .login_section h3 {
+    font-size: 28px;
+  }
+ 
+}
+
+.d-none{
+	display: none;
+}
+ </style>
+
+
+{header}
+
+
+<div class="container">
+  <div class="login_section">
+    <h3>Sign In</h3>
+    <p>We'll send a confirmation code to your phone.</p>
+    <div class="form-group" id="mobileArea">
+      <label>Enter Phone <span>*</span></label>
+      <input type="text" class="form-control" placeholder="Enter Your 10 Digit Number" id="mobile">
+      <button class="btn btn-primary" type="button" onclick="sendOtp()">Get OTP</button>
+    </div>
+    <div class="form-group d-none" id="otpArea">
+      <label>OTP <span>*</span></label>
+      <input type="text" class="form-control" placeholder="Enter Your 6 Digit OTP" id="otp" value="">
+	  <br>
+      <input type="text" class="form-control d-none" placeholder="Enter Name" id="name">
+	  <br>
+      <input type="email" class="form-control d-none" placeholder="Enter Email Address" id="email">
+      <button class="btn btn-primary" type="button" onclick="verifyOtp()">Verify</button>
+    </div>
+	<input class="d-none" value="{refLink}" id="refLink" />
+	
+    <div class="login-or d-none">
+      <span class="or-line"></span>
+      <span class="span-or-log">Or, log in with your email</span>
+    </div>
+    <div class="social-login d-none">
+      <a href="#" class="d-flex align-items-center justify-content-center input-block btn google-login w-100">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+        </span>
+        Log in with Google</a>
+    </div>
+    <div class="social-login d-none">
+      <a href="#" class="d-flex align-items-center justify-content-center input-block btn google-login w-100">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+        </span>
+        Log in with Facebook</a>
+    </div>
+
+  </div>
+
+</div>
+
+{footer}
+  <script src="/tripeasy/assets/js/plugins.min.js"></script>
+  <script src="/tripeasy/assets/js/carrent.min.js"></script>
+  <script src="/tripeasy/assets/js/owl.carousel.min.js"></script>
+  <script src="/tripeasy/login/index.js"></script>
+  <script>
+
+    $('.welcome-slider').owlCarousel({
+
+      animateOut: 'fadeOut',
+
+      items: 1,
+
+      loop: true,
+
+      autoplay: true,
+
+      margin: 30,
+
+      smartSpeed: 700
+
+    });
+	
+	
+
+  </script>
+
+
+
+</body>
+
+
+
+</html>

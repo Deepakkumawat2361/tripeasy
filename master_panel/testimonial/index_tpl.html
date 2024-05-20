@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Title -->
+  <title>Fojota - Admin Dashboard Template</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../img/core-img/favicon.ico" />
+
+  <!-- Plugins File -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/animate.css" />
+  <link rel="stylesheet" href="../css/introjs.min.css" />
+
+  <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<style>
+.flapt-logo {
+    margin: 52px 0 0 4px;
+}
+</style>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-book">
+      <div class="inner">
+        <div class="left"></div>
+        <div class="middle"></div>
+        <div class="right"></div>
+      </div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /Preloader -->
+
+  <!-- ======================================
+    ******* Page Wrapper Area Start **********
+    ======================================= -->
+  
+    <!-- Sidemenu Area -->
+    {sidebar}
+	
+    <!-- Page Content -->
+    <div class="flapt-page-content">
+      <!-- Top Header Area -->
+      <header class="top-header-area d-flex align-items-center justify-content-between">
+        <div class="left-side-content-area d-flex align-items-center">
+          <!-- Mobile Logo -->
+          <div class="mobile-logo">
+            <a href="index.html"><img src="../img/core-img/small-logo.png" alt="Mobile Logo" /></a>
+          </div>
+
+          <!-- Triggers -->
+          <div class="flapt-triggers">
+            <div class="menu-collasped" id="menuCollasped">
+              <i class="bx bx-grid-alt"></i>
+            </div>
+            <div class="mobile-menu-open" id="mobileMenuOpen">
+              <i class="bx bx-grid-alt"></i>
+            </div>
+          </div>
+
+          <!-- Left Side Nav -->
+          <ul class="left-side-navbar d-flex align-items-center">
+            <li class="hide-phone app-search">
+              <input type="text" class="form-control" placeholder="Search..." />
+              <span class="bx bx-search-alt"></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="right-side-navbar d-flex align-items-center justify-content-end">
+          <!-- Mobile Trigger -->
+          <div class="right-side-trigger" id="rightSideTrigger">
+            <i class="bx bx-menu-alt-right"></i>
+          </div>
+
+          <!-- Top Bar Nav -->
+          <ul class="right-side-content d-flex align-items-center">
+
+
+            <li class="nav-item dropdown">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="bx bx-envelope"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <!-- Message Area -->
+                <div class="top-message-area">
+                  <!-- Heading -->
+                  <div class="message-heading">
+                    <div class="heading-title">
+                      <h6 class="mb-0">All Messages</h6>
+                    </div>
+                    <span>10</span>
+                  </div>
+
+                  <div class="message-box" id="messageBox">
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-dollar-circle"></i>
+                      <div>
+                        <span>Did you know?</span>
+                        <p class="mb-0 font-12">
+                          Adipisicing elit. Ipsa, porro!
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-shopping-bag"></i>
+                      <div>
+                        <span>Congratulations! </span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit.
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-wallet-alt"></i>
+                      <div>
+                        <span>Hello Obeta</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit.
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-border-all"></i>
+                      <div>
+                        <span>Your order is placed</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit.
+                        </p>
+                      </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-wallet-alt"></i>
+                      <div>
+                        <span>Haslina Obeta</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="bx bx-bell bx-tada"></i>
+                <span class="active-status"></span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <!-- Top Notifications Area -->
+                <div class="top-notifications-area">
+                  <!-- Heading -->
+                  <div class="notifications-heading">
+                    <div class="heading-title">
+                      <h6>Notifications</h6>
+                    </div>
+                    <span>11</span>
+                  </div>
+
+                  <div class="notifications-box" id="notificationsBox">
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-shopping-bag"></i>
+                      <div>
+                        <span>Your order is placed</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit. Ipsa, porro!
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-wallet-alt"></i>
+                      <div>
+                        <span>Haslina Obeta</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit. Ipsa, porro!
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-dollar-circle"></i>
+                      <div>
+                        <span>Your order is Dollar</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit. Ipsa, porro!
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-wallet-alt"></i>
+                      <div>
+                        <span>Haslina Obeta</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit. Ipsa, porro!
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-border-all"></i>
+                      <div>
+                        <span>Your order is placed</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit. Ipsa, porro!
+                        </p>
+                      </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      <i class="bx bx-wallet-alt"></i>
+                      <div>
+                        <span>Haslina Obeta</span>
+                        <p class="mb-0 font-12">
+                          Consectetur adipisicing elit. Ipsa, porro!
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="img/bg-img/person_1.jpg" alt="" />
+              </button>
+              <div class="dropdown-menu profile dropdown-menu-right">
+                <!-- User Profile Area -->
+                <div class="user-profile-area">
+                  <a href="#" class="dropdown-item"><i class="bx bx-user font-15" aria-hidden="true"></i> My
+                    profile</a>
+                  <a href="#" class="dropdown-item"><i class="bx bx-wallet font-15" aria-hidden="true"></i>
+                    My wallet</a>
+                  <a href="#" class="dropdown-item"><i class="bx bx-wrench font-15" aria-hidden="true"></i>
+                    settings</a>
+                  <a href="#" class="dropdown-item"><i class="bx bx-power-off font-15" aria-hidden="true"></i>
+                    Sign-out</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- Main Content Area -->
+      <div class="main-content introduction-farm">
+        <div class="content-wraper-area">
+        <div class="container-fluid">
+            <div class="row g-4">
+              <div class="col-lg-6">
+       
+              </div>
+
+        
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title border-bootom-none mb-30 d-flex align-items-center justify-content-between">
+                      <h6 class="mb-0">Car List</h6>
+                      <div class="dashboard-dropdown">
+					      <a href="/tripeasy/master_panel/testimonial/add/">Add Testinomail</a>
+                        <div class="dropdown">
+                          <button class="btn dropdown-toggle" type="button" id="dashboardDropdown57"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ti-more"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dashboardDropdown57">
+                            <a class="dropdown-item" href="#"><i class="ti-pencil-alt"></i> Edit</a>
+                            <a class="dropdown-item" href="#"><i class="ti-settings"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="ti-eraser"></i> Remove</a>
+                            <a class="dropdown-item" href="#"><i class="ti-trash"></i> Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive text-nowrap">
+                      <table class="table table-centered table-nowrap table-hover mb-0">
+                        <thead>
+                          <tr>
+						    <th>Id</th>
+                            <th>Name</th>
+                            <th>Image</th>
+							<th>Description</th>
+                            <th>Stutas</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="table">
+                         
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Area -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <!-- Footer Area -->
+              <footer class="footer-area d-sm-flex justify-content-center align-items-center justify-content-between">
+                <!-- Copywrite Text -->
+                <div class="copywrite-text">
+                  <p class="font-13">
+                    Developed by &copy; <a href="#">Card</a>
+                  </p>
+                </div>
+                <div class="fotter-icon text-center">
+                  <p class="mb-0 font-13">2024 &copy; Flapt Admin</p>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================
+    ********* Page Wrapper Area End ***********
+    ======================================= -->
+
+  <!-- Must needed plugins to the run this Template -->
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/default-assets/setting.js"></script>
+  <script src="../js/default-assets/scrool-bar.js"></script>
+
+  <!-- Active JS -->
+  <script src="../js/default-assets/active.js"></script>
+   <script src="index.js"></script>
+</body>
+
+</html>

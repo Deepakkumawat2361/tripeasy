@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Specific Meta
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Grand Ride Car Rent Service" />
+    <meta name="keywords" content="Car Rent" />
+    <meta name="author" content="" />
+    <!-- Titles
+    ================================================== -->
+    <title>Grand Ride Car Rent Service</title>
+	<link href="https://fonts.googleapis.com/css?family=Exo:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7cRoboto+Slab:400,700" rel="stylesheet" />
+	<link rel="stylesheet" href="/tripeasy/assets/css/plugins.min.css" />
+	<link rel="stylesheet" href="/tripeasy/assets/css/icons.min.css" />
+	<link rel="stylesheet" href="/tripeasy/assets/css/style.css" />
+	<link rel="stylesheet" href="/tripeasy/assets/css/color-schemer.css" />
+	 
+</head>
+<body>
+  <style>
+  .car_plans_section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+  .car_plans_section > li {
+    padding: 0 5px;
+    width: 50%;
+  }
+  .car_plans_section > li .car_plans_inner_section {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,.15);
+  }
+  .car_plans_section > li.active .car_plans_inner_section {
+    background-color: #ff4818;
+  }
+  .car_plans_section > li.active .car_plans_inner_section *{
+    color:#fff !important;
+  }
+  .car_plans_inner_section .day_sec {
+    font-size: 11px;
+    text-align: center;
+    display: block;
+  }
+  .car_plans_inner_section .km_sec {
+    font-size: 10px;
+    text-align: center;
+    display: block;
+  }
+  .car_plans_inner_section h4 {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+  }
+   
+  </style>
+
+{header}
+<div class="container">
+
+  <div class="row car_listing_page">
+    <nav aria-label="breadcrumb" class="common_breacrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active">Cars List</li>
+      </ol>
+    </nav>
+    <div class="col-md-12">
+			 <h1 style="font-size: 1.9em;font-weight: bold;">{title}</h1>
+        <div class="regular-search modify_search">
+             <p>Modify Search  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"></path></svg> </p>
+			 
+            <div class="row">
+			
+			<form>
+                <div class="col-md-12">
+				<span id="errors" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    
+                    <div class="input">
+                        <i class="fa fa-map-marker"></i>
+                        <input name="location" value="{location}" type="text" placeholder="Delhi" class="pick-location form-controller" fdprocessedid="2ubjsq">
+                    </div>
+                    <!--/.input-->
+                </div>
+                <!--/.col-md-4-->
+                <div class="col-md-2">
+                    
+                    <div class="input">
+                        <i class="fa fa-calendar"></i>
+                        <input value="{start_date}" name="start_date" type="text" class="date-start date-selector form-controller" placeholder="24/06/2023" fdprocessedid="wecb63">
+                    </div>
+                    <!--/.input-->
+                </div>
+                <!--/.col-md-4-->
+                <div class="col-md-2">
+                 
+                    <div class="input">
+                        <i class="fa fa-clock-o"></i>
+                        <input  value="{start_time}" name="start_time"  type="text" class="time-selector form-controller" placeholder="15:00 am" fdprocessedid="qt8f1">
+                    </div>
+                    <!--/.input-->
+                </div>
+                <!--/.col-md-4-->
+                  
+                <div class="col-md-2">
+                   
+                    <div class="input">
+                        <i class="fa fa-calendar"></i>
+                        <input  value="{end_date}" name="end_date" type="text" class="date-end date-selector form-controller" placeholder="25/06/2023" fdprocessedid="2roixq">
+                    </div>
+                    <!--/.input-->
+                </div>
+                <!--/.col-md-4-->
+                <div class="col-md-2">
+                   
+                    <div class="input">
+                        <i class="fa fa-clock-o"></i>
+                        <input  value="{end_time}" name="end_time"  type="text" class="time-selector form-controller" placeholder="12:00 am" fdprocessedid="wplbqk">
+                    </div>
+                    <!--/.input-->
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="button" fdprocessedid="06vo7r">Modify</button>
+                </div>
+                <!--/.col-md-4-->
+            </form>
+            </div>
+			 
+            <div class="listing_bottm">
+              <div class="days-selected"> <b>Journey duration</b> <span class="total-days">{duration}</span></div>
+              
+            </div>
+
+
+            <!-- /.row -->
+        </div>
+    </div>
+    <div class="col-md-2">
+      <div class="plp-rental-filter-wrapper">
+        <div class="fiilter_list">
+           <div class="filter-text filtter_box">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/></svg>   Filter</div>
+           <div class="clear-all-text">
+             <a href="javascript:void(0)" class="modify_search">
+              Modify Search
+             </a>
+            <span class="clear_all"> Clear all</span> </div>
+        </div>
+        <div class="plp-cars-filter-web">
+            <div class="plp-filter-wrapper-web  one_way_plan">
+                <div class="cross_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+                </div>
+                <div class="plp-filter-header-web">Trip</div>
+                <div class="plp-filter-option-web">
+                  <span class="plp-filter-checkbox">                
+                    <input type="checkbox" id="flexCheckDefault">
+                    <span class="plp-filter-label"  for="flexCheckDefault">One Way</span>
+                  </span>
+                
+                </div> 
+                <div class="plp-filter-option-web">
+                  <span class="plp-filter-checkbox">                
+                    <input type="checkbox"> 
+                    
+                  </span>
+                  <span class="plp-filter-label">Two Way</span>
+                </div>
+  
+             </div>
+           <div class="plp-filter-wrapper-web">
+              <div class="plp-filter-header-web">Segment</div>
+              <div  class="plp-filter-option-web"><span class="plp-filter-checkbox"> 
+                <input name="segment" type="checkbox"  class="chk" value="hatchback"> 
+                
+              </span>
+                <span class="plp-filter-label">Hatchback</span></div>
+              <div  class="plp-filter-option-web"><span class="plp-filter-checkbox"> 
+                 <input name="segment" type="checkbox"  class="chk" value="sedan"> 
+                 
+              </span><span class="plp-filter-label">Sedan</span></div>
+              <div  class="plp-filter-option-web">
+                <span class="plp-filter-checkbox"> 
+                  <input name="segment" type="checkbox"  class="chk" value="suv"> 
+                    
+                </span>
+               <span class="plp-filter-label">SUV</span>
+            </div>
+           </div>
+           
+           <div class="plp-filter-wrapper-web">
+              <div class="plp-filter-header-web">Fuel Type</div>
+              <div  class="plp-filter-option-web">
+                <span class="plp-filter-checkbox">                
+                  <input name="fuel" type="checkbox"  class="chk" value="petrol"> 
+                   
+                </span>
+                <span class="plp-filter-label">Diesel</span>
+              </div>
+              <div class="plp-filter-option-web">
+                <span class="plp-filter-checkbox">                 
+                  <input name="fuel" type="checkbox"  class="chk" value="diesel"> 
+                   
+                </span>
+                <span class="plp-filter-label">Petrol</span>
+              </div>
+           </div>
+           <div class="plp-filter-wrapper-web">
+              <div class="plp-filter-header-web">Transmission Type</div>
+              <div  class="plp-filter-option-web">
+                <span class="plp-filter-checkbox">                 
+                  <input type="checkbox" name="transmission" value="auto"> 
+                   
+                </span>
+                <span class="plp-filter-label">Automatic</span>
+              </div>
+              <div class="plp-filter-option-web">
+                <span class="plp-filter-checkbox">                 
+                  <input type="checkbox"  name="transmission" value="manual"> 
+                  
+                </span>
+                <span class="plp-filter-label">Manual</span></div>
+              </div>
+             <div class="plp-filter-wrapper-web">
+              <div class="plp-filter-header-web">Seating Capacity</div>
+              <div class="plp-filter-option-web">
+                 <span class="plp-filter-checkbox">                 
+                   <input type="checkbox"  name="seater" value="5" > 
+                    
+                 </span>
+                 <span class="plp-filter-label">5 seats</span>
+              </div>
+              <div  class="plp-filter-option-web"><span class="plp-filter-checkbox">                
+                 <input type="checkbox" name="seater" value="7" > 
+                  
+                </span><span class="plp-filter-label">7 seats</span>
+              </div>
+              <div  class="plp-filter-option-web"><span class="plp-filter-checkbox">                
+                 <input type="checkbox" name="seater" value="8" > 
+                  
+                </span><span class="plp-filter-label">8 seats</span>
+              </div>
+              <div  class="plp-filter-option-web"><span class="plp-filter-checkbox">                
+                 <input type="checkbox" name="seater" value="9" > 
+                  
+                </span><span class="plp-filter-label">9 seats</span>
+              </div>
+              <div  class="plp-filter-option-web"><span class="plp-filter-checkbox">                
+                 <input type="checkbox" name="seater" value="10" > 
+                  
+                </span><span class="plp-filter-label">10 seats</span>
+              </div>
+           </div>
+        </div>
+     </div>
+    </div>
+    <div class="col-md-10">
+     <div class="row" id="list">
+        
+                  
+     </div>
+
+    </div>     
+ 
+  </div>
+</div>
+    <!-- ======footer area======= -->
+    <div class="container footer-top-border">
+        <div class="vehicle-multi-border yellow-black"></div>
+        <!-- /.vehicle-multi-border -->
+    </div>
+    <!-- /.container -->
+	{footer}
+	<script src="/tripeasy/assets/js/plugins.min.js"></script>
+	 
+	
+	<script src="/tripeasy/car-listing/index.js"></script>
+   <script>
+
+   // Main Menu Toggle
+   $(document).ready(function(){
+      $(".filtter_box").click(function () {
+        if($(".plp-cars-filter-web").hasClass('header_open')){
+          $(".plp-cars-filter-web").removeClass('header_open')
+        }
+        else{
+          $(".plp-cars-filter-web").addClass('header_open');
+        }
+      });
+    });
+
+      $(".cross_icon").click(function(){
+         $(".plp-cars-filter-web").removeClass("header_open");
+      });
+
+
+
+      $(document).ready(function(){
+      $(".clear-all-text .modify_search").click(function () {
+        if($(".regular-search.modify_search").hasClass('search_open')){
+          $(".regular-search.modify_search").removeClass('search_open')
+        }
+        else{
+          $(".regular-search.modify_search").addClass('search_open');
+        }
+      });
+    });
+
+      $(".modify_search svg").click(function(){
+         $(".regular-search.modify_search").removeClass("search_open");
+      });
+
+   </script>
+
+
+</body>
+</html>

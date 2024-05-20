@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/remixicon.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/flaticon.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/sidebar-menu.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/simplebar.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/apexcharts.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/prism.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/rangeslider.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/sweetalert.min.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/quill.snow.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/style.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.css">
+      <link rel="icon" type="/master_panel/assets/image/png" href="assets/images/favicon.png">
+      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+      <title>::Education::</title>
+   </head>
+   <style>
+    
+      
+      .ui.dropdown {
+      max-width: 800px;
+      }
+      @media only screen and (max-width: 767px) {
+      .ui.selection.dropdown .menu {
+      /*      max-height: 8.01428571rem; /* + 1.335714285 to 9.349999995rem */
+      /*      max-height: 9.349999995rem; /* Adds a half */
+      max-height: 16.02857142rem; /* Double size */
+      }
+      }
+      @media only screen and (min-width: 768px) {
+      .ui.selection.dropdown .menu {
+      /*         max-height: 10.68571429rem; /* + 1.3357142863 to 12.0214285763rem */
+      max-height: 12.0214285763rem;
+      }
+      }
+      @media only screen and (min-width: 992px) {
+      .ui.selection.dropdown .menu {
+      max-height: 16.02857143rem; /* + 1.3357142858 to 17.3642857158rem */
+      }
+      }
+      @media only screen and (min-width: 1920px) {
+      .ui.selection.dropdown .menu {
+      max-height: 21.37142857rem; /* + 1.3357142856 to 22.7071428556rem */
+      }
+      }
+   </style>
+   <body>
+      {sidebar}
+      <div class="container-fluid">
+         <div class="main-content d-flex flex-column">
+            {navbar}
+            <div class="d-sm-flex text-center justify-content-between align-items-center mb-4">
+               <ul class="nav nav-tabs tab-style-2 d-sm-flex d-block border-bottom border-block-end-dashed" >
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link active"  href="" >Basic info</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link"  href="/tripeasy/master_panel/vehicle/edit/detail?id={id}" >Car detail</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link"  href="/tripeasy/master_panel/vehicle/edit/document?id={id}"   href="" >Car Document</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link"  href="/tripeasy/master_panel/vehicle/edit/owner_info?id={id}"   href="" >Owner details</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link"  href="/tripeasy/master_panel/vehicle/edit/status?id={id}"   href="" >Confarmation</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-lg-12">
+                  <div class="card bg-white border-0 rounded-10 mb-4">
+                     <div class="card-body p-4">
+                        <div class="tab-content" id="myTabContent">
+                           <div class="tab-pane fade active show" id="preview-tab-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
+                              <form>
+                                 <div class="row">
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Security deposite</label>
+                                          <div class="form-group position-relative">
+                                             <input name="security_deposite" type="text" class="form-control text-dark ps-5 h-58" placeholder="security_deposite">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Extra km charge</label>
+                                          <div class="form-group position-relative">
+                                             <input name="extra_km_charge" type="text" class="form-control text-dark ps-5 h-58" placeholder="extra_km_charge">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Sold out from</label>
+                                          <div class="form-group position-relative">
+                                             <input name="sold_from" type="date" class="form-control text-dark ps-5 h-58" placeholder="sold_from">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Sold out to</label>
+                                          <div class="form-group position-relative">
+                                             <input name="sold_to" type="date" class="form-control text-dark ps-5 h-58" placeholder="sold_to">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Pick up loction</label>
+                                          <div class="form-group position-relative">
+                                             <input name="pick_up_loction" type="text" class="form-control text-dark ps-5 h-58" placeholder="pick up loction">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Drop location</label>
+                                          <div class="form-group position-relative">
+                                             <input name="drop_location" type="text" class="form-control text-dark ps-5 h-58" placeholder="Drop location">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">KM reading</label>
+                                          <div class="form-group position-relative">
+                                             <input name="km_reading" type="text" class="form-control text-dark ps-5 h-58" placeholder="km reading">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+									
+                            <!--        <div class="ui form">
+                                       <label class="label">Multiple select</label>
+                                       <div class="inline field">
+                                         <label class="label">Select Multiple value </label>
+                                          <select name="skills" multiple="" class="form-control form-group position-relative label ui selection fluid dropdown">
+                                             <option value="">All</option>
+                                             <option value="1">Change Methodology</option>
+                                             <option value="2">Cognitive Computing & AI</option>
+                                             <option value="3">Connectivity & Collaboration</option>
+                                             <option value="4">Culture in Action</option>
+                                             <option value="5">Future of Work</option>
+                                             <option value="6">HR Transformation</option>
+                                             <option value="7">Human-centered Design</option>
+                                             <option value="8">Machine Learning & AI</option>
+                                             <option value="9">Operational Effectiveness</option>
+                                             <option value="10">Operational Excellence</option>
+                                             <option value="11">Organizational Change</option>
+                                          </select>
+                                       </div>
+                                    </div>-------->
+									
+									<div class="col-lg-12">
+									   <div class="form-group mb-4">
+										  <label class="label">Product Gallery</label>
+										  <div class="form-control h-100 text-center position-relative p-4 p-lg-5">
+											 <div class="product-upload">
+												<label for="file-upload" class="file-upload mb-0">
+												<i class="ri-upload-cloud-2-line fs-2 text-gray-light"></i>
+												<span class="d-block fw-semibold text-body">Drop files here or click to upload.</span>
+												</label>
+												
+												
+												<input type="file" name="image" id="file-upload">
+												
+											 </div>
+										  </div>
+									   </div>
+									</div>
+
+                                    <div class="row" id="imageContainer">
+										
+                                    </div>
+
+
+                                    <div class="d-flex gap-2 mt-2">
+                                       <button type="submit" class="form-control btn btn-primary">Submit</button>
+                                    </div>
+									
+									
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-grow-1"></div>
+            <footer class="footer-area bg-white text-center rounded-top-10">
+               <p class="fs-14">© <span class="text-primary">Education</span> is Proudly Owned by <a href="https://education.com/" target="_blank" class="text-decoration-none">Education</a></p>
+            </footer>
+         </div>
+      </div>
+      </div>
+      <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/master_panel/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/sidebar-menu.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/dragdrop.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/rangeslider.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/sweetalert.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/quill.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/data-table.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/prism.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/clipboard.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/feather.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/simplebar.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/custom/custom.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+     
+      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.js"></script>
+      <script>
+         $('.label.ui.dropdown')
+         .dropdown();
+         
+         $('.no.label.ui.dropdown')
+         .dropdown({
+         useLabels: false
+         });
+         
+         $('.ui.button').on('click', function () {
+         $('.ui.dropdown')
+          .dropdown('restore defaults')
+         })
+         
+      </script>
+   </body>
+</html>

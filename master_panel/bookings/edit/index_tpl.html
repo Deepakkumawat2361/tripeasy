@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/remixicon.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/flaticon.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/sidebar-menu.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/simplebar.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/apexcharts.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/prism.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/rangeslider.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/sweetalert.min.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/quill.snow.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/style.css">
+      <link rel="icon" type="/tripeasy/master_panel/assets/image/png" href="/tripeasy/assets/images/favicon.png">
+      <title>::Education::</title>
+   </head>
+   <style>
+      img.size {
+      height: 40px;
+      width: 88px;
+      }
+
+   </style>
+   <body>
+       
+      {sidebar}
+      <div class="container-fluid">
+         <div class="main-content d-flex flex-column">
+            {navbar}
+            <div class="d-sm-flex text-center justify-content-between align-items-center mb-4">
+			    
+			</div>
+            <div class="row justify-content-center">
+               <div class="col-lg-12">
+                  <div class="card bg-white border-0 rounded-10 mb-4">
+                     <div class="card-body p-4">
+                         
+                         
+                        <div class="tab-content" id="myTabContent">
+                           <div class="tab-pane fade active show" id="preview-tab-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
+                              <form>
+                                 <div class="row">
+								    <div class="col-lg-12">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Location</label>
+                                          <div class="form-group position-relative">
+                                             <select name="location" class="form-select form-control ps-5 h-58" aria-label="Default select example">
+                                                 <option value="delhi">DELHI</option>
+												 <option value="lucknow">Lucknow</option>
+											 
+                                             </select>
+                                             <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+									
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Name</label>
+                                          <div class="form-group position-relative">
+                                             <input name="name" type="text" class="form-control text-dark ps-5 h-58" placeholder="Enter Name">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                     
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Segment</label>
+                                          <div class="form-group position-relative">
+                                             <select name="segment" class="form-select form-control ps-5 h-58" aria-label="Default select example">
+                                                 <option value="hatchback">hatchback</option>
+												 <option value="muv">muv</option>
+												 <option value="suv">suv</option>
+												 <option value="xuv">xuv</option>
+												 <option value="sedan">sedan</option>
+                                             </select>
+                                             <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+									
+									<div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Model</label>
+                                          <div class="form-group position-relative">
+                                             <input name="model" type="text" class="form-control text-dark ps-5 h-58" placeholder="Enter Name">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                     
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Segment</label>
+                                          <div class="form-group position-relative">
+                                             <select name="fuel" class="form-select form-control ps-5 h-58" aria-label="Default select example">
+                                                 <option value="petrol">Petrol</option>
+												 <option value="diesel">Diesel</option>
+												 <option value="electrtic">Electrtic</option>
+												 <option value="cng">CNG</option>
+												 <option value="lng">LNG</option>
+                                             </select>
+                                             <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Seater</label>
+                                          <div class="form-group position-relative">
+                                             <select name="seater" class="form-select form-control ps-5 h-58" aria-label="Default select example">
+                                                 <option value="4">4</option>
+                                                 <option value="5">5</option>
+                                                 <option value="6">6</option>
+                                                 <option value="7">7</option>
+                                                 <option value="8">8</option>
+												  
+                                             </select>
+                                             <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">transmission</label>
+                                          <div class="form-group position-relative">
+                                             <select name="transmission" class="form-select form-control ps-5 h-58" aria-label="Default select example">
+                                                 <option value="auto">Auto</option>
+												 <option value="manual">Manual</option>
+												  
+                                             </select>
+                                             <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+									
+									<div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Model Year</label>
+                                          <div class="form-group position-relative">
+                                             <select name="model_year" class="form-select form-control ps-5 h-58" aria-label="Default select example">
+                                                    <option value="2024">2024</option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2021">2021</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2014">2014</option>
+													  
+                                             </select>
+                                             <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+									<div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Model month</label>
+                                          <div class="form-group position-relative">
+                                             <select name="model_month" class="form-select form-control ps-5 h-58" aria-label="Default select example">
+                                                    <option value="1">January</option>
+													 <option value="2">February</option>
+													 <option value="3">March</option>
+													 <option value="4">April</option>
+													 <option value="5">May</option>
+													 <option value="6">June</option>
+													 <option value="7">July</option>
+													 <option value="8">August</option>
+													 <option value="9">September</option>
+													 <option value="10">October</option>
+													 <option value="11">November</option>
+													 <option value="12">December</option>
+
+												  
+                                             </select>
+                                             <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+									
+									<div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Price</label>
+                                          <div class="form-group position-relative">
+                                             <input name="price" type="text" class="form-control text-dark ps-5 h-58" placeholder="Enter Name">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+									
+									<div class="col-lg-6">
+                                       <div class="form-group mb-4">
+                                          <label class="label">Unlimited price</label>
+                                          <div class="form-group position-relative">
+                                             <input name="unlimited_price" type="text" class="form-control text-dark ps-5 h-58" placeholder="Enter Name">
+                                             <i class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                     
+                                    <div class="col-lg-12">
+									   <div class="form-group mb-4">
+										  <label class="label">Product Gallery</label>
+										  <div class="form-control h-100 text-center position-relative p-4 p-lg-5">
+											 <div class="product-upload">
+												<label for="file-upload" class="file-upload mb-0">
+												<i class="ri-upload-cloud-2-line fs-2 text-gray-light"></i>
+												<span class="d-block fw-semibold text-body">Drop files here or click to upload.</span>
+												</label>
+												<input id="file-upload" name="image" type="file">
+												<img id="images" src=""/>
+											 </div>
+										  </div>
+									   </div>
+									</div>
+									
+									<div class="row" id="imageContainer">
+									
+									</div>
+                                 
+									 <div class="d-flex gap-2 mt-2">
+										<button type="submit" class="btn btn-primary bg-primary bg-opacity-10 text-primary border-0 fw-semibold py-2 px-4">Submit</button>
+									 </div>
+
+								 </div>
+                              </form>
+                           </div>
+                       
+                        </div>
+                     </div>
+                  </div>
+               </div>
+                
+                
+                
+            </div>
+            <div class="flex-grow-1"></div>
+            <footer class="footer-area bg-white text-center rounded-top-10">
+               <p class="fs-14">© <span class="text-primary">Education</span> is Proudly Owned by <a href="https://education.com/" target="_blank" class="text-decoration-none">Education</a></p>
+            </footer>
+         </div>
+      </div>
+      </div>
+      <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/master_panel/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/sidebar-menu.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/dragdrop.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/rangeslider.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/sweetalert.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/quill.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/data-table.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/prism.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/clipboard.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/feather.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/simplebar.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/custom/custom.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+   </body>
+</html>

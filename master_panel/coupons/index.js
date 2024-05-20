@@ -1,0 +1,52 @@
+$(document).ready(function(){
+	
+	
+	
+	var url = window.location.href;
+    var urlParams = new URL(url);
+    var id = urlParams.searchParams.get("id");
+			getlist();
+			
+		
+		function getlist()
+		{
+			 
+			$.ajax({
+				url:"/tripeasy/api/v1/admin/coupons/list.php?page=1",
+				dataType : 'json',
+				type : 'get',
+				data : { },
+					success : function(response){
+					  data= response.response;
+					 if(data.status == 'success'){
+						 res = data.data;
+						  var carTableElement = $('#table');
+						  
+						  res.forEach(function(listing, i){
+							  //console.log(listing);
+							  var row = $("<tr>");
+							   row.append("<td>" + listing.id + "</td>");
+							   row.append("<td>" + listing.code + "</td>");
+						       row.append("<td>" + listing.discount_type + "</td>");
+							   if((listing.discount_type) == 'percentage'){
+								   row.append("<td>" + listing.discount_amount + " %</td>");
+							   }else{
+								  row.append("<td>" + listing.discount_amount + "</td>"); 
+							   }
+						       
+							   row.append(`<td>
+												<a class='border-0 btn btn-primary py-2 px-4 text-white fs-14 fw-semibold rounded-3' href='/tripeasy/master_panel/coupons/edit/?id=${listing.id}'>Edit</a>&nbsp;&nbsp;
+												<a class='border-0 btn btn-danger py-2 px-4 text-white fs-14 fw-semibold rounded-3' href='/tripeasy/master_panel/coupons/delete.php/?id=${listing.id}'>Delete</a>
+											</td>`);	   
+								  carTableElement.append(row);
+						  });
+					      
+					 }
+					}
+					
+			});
+		}
+	
+	});
+
+ 

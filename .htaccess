@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^([a-z-&0-9]*)-rental-in-([a-z-]+)$ car-listing/index.php?category=$1&location=$2 [NC,B,QSA,END,L]
+RewriteRule ^([a-z-&0-9]*)-rental-in-([a-z-]+)/([a-z-&0-9]*)$ car-listing-details/index.php?category=$1&location=$2&slug=$3 [NC,B,QSA,END,L]

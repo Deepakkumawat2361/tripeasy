@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/remixicon.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/flaticon.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/sidebar-menu.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/simplebar.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/apexcharts.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/prism.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/rangeslider.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/sweetalert.min.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/quill.snow.css">
+      <link rel="stylesheet" href="/tripeasy/master_panel/assets/css/style.css">
+      <link rel="icon" type="/tripeasy/master_panel/assets/image/png" href="/tripeasy/master_panel/assets/images/favicon.png">
+      <title>::Education::</title>
+   </head>
+   <style>
+      img.size {
+      height: 40px;
+      width: 88px;
+      }
+   </style>
+   <body>
+      {sidebar}
+      <div class="container-fluid">
+         <div class="main-content d-flex flex-column">
+            {navbar}
+            <div class="d-sm-flex text-center justify-content-between align-items-center mb-4">
+               <ul class="nav nav-tabs tab-style-2 d-sm-flex d-block border-bottom border-block-end-dashed" >
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link "  href="/tripeasy/master_panel/vehicle/edit?id={id}" >Basic info</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link"  href="/tripeasy/master_panel/vehicle/edit/detail?id={id}" >Car detail</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link active"  href="/tripeasy/master_panel/vehicle/edit/document?id={id}"   href="" >Car Document</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link"  href="/tripeasy/master_panel/vehicle/edit/owner_info?id={id}"   href="" >Owner details</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link"  href="/tripeasy/master_panel/vehicle/edit/status?id={id}"   href="" >Confarmation</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-lg-12">
+                  <div class="card bg-white border-0 rounded-10 mb-4">
+                     <div class="card-body p-4">
+                        <div class="tab-content" id="myTabContent">
+                           <div class="tab-pane fade active show" id="preview-tab-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
+                              <form>
+							  
+                                 <div class="form-group p-4 bg-border-gray-light d-sm-flex justify-content-between align-items-center rounded-10">
+									<div id="imageContainer" class="d-sm-flex align-items-center mb-3 mb-sm-0 me-lg-3" >
+                                       <h4 class="body-font fs-15 fw-semibold text-body">Rc Documents</h4></br>
+                                       <img  id="image_show" src="" class="rounded-4 wh-78 ms-3 ms-lg-0" alt="product">
+                                    </div>
+
+									 <div class="d-sm-flex align-items-center mb-3 mb-sm-0 me-lg-3">
+                                       <div class="product-upload">
+                                          <label for="file-upload" class="file-upload mb-0">
+                                          <i class="ri-upload-cloud-2-line fs-2 text-gray-light"></i>
+                                          <span class="d-block fw-semibold text-body">Drop files here or click to upload.</span>
+                                          </label>
+                                          <input type="file" name="image" id="file-upload">
+                                       </div>
+                                    </div>
+									
+                                    <div class="d-flex ms-sm-3 ms-md-0">
+                                       <button class="btn bg-danger bg-opacity-10 text-danger fw-semibold">Delete</button>
+                                    </div>
+                                 </div>
+								 
+								 <div class="form-group p-4 bg-border-gray-light d-sm-flex justify-content-between align-items-center rounded-10">
+									<div id="imageContainer" class="d-sm-flex align-items-center mb-3 mb-sm-0 me-lg-3" >
+                                       <h4 class="body-font fs-15 fw-semibold text-body">Car Paper</h4></br>
+                                       <img  id="car" src="" class="rounded-4 wh-78 ms-3 ms-lg-0" alt="product">
+                                    </div>
+
+									 <div class="d-sm-flex align-items-center mb-3 mb-sm-0 me-lg-3">
+                                       <div class="product-upload">
+                                          <label for="file-upload" class="file-upload mb-0">
+                                          <i class="ri-upload-cloud-2-line fs-2 text-gray-light"></i>
+                                          <span class="d-block fw-semibold text-body">Drop files here or click to upload.</span>
+                                          </label>
+                                          <input type="file" name="image2" id="upload_image">
+                                       </div>
+                                    </div>
+									
+                                    <div class="d-flex ms-sm-3 ms-md-0">
+                                       <button class="btn bg-danger bg-opacity-10 text-danger fw-semibold">Delete</button>
+                                    </div>
+                                 </div>
+								 
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-grow-1"></div>
+            <footer class="footer-area bg-white text-center rounded-top-10">
+               <p class="fs-14">© <span class="text-primary">Education</span> is Proudly Owned by <a href="https://education.com/" target="_blank" class="text-decoration-none">Education</a></p>
+            </footer>
+         </div>
+      </div>
+      </div>
+      <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/tripeasy/master_panel/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/sidebar-menu.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/dragdrop.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/rangeslider.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/sweetalert.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/quill.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/data-table.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/prism.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/clipboard.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/feather.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/simplebar.min.js"></script>
+      <script src="/tripeasy/master_panel/assets/js/custom/custom.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+   </body>
+</html>
