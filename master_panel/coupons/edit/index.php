@@ -6,6 +6,18 @@ include_once("$path/connect.php");
 header('Content-Type: text/html; charset=UTF-8');
  
  
+//Getting users List :: Start
+$userlist='';
+$sql = $connect->query("SELECT * FROM users") OR die($connect->error);
+while($res = $sql->fetch_object()){
+	$userlist.='
+		<option value="'.$res->id.'">'.$res->name.'</option>
+	';
+}
+
+//Getting users List :: End
+
+ 
  
 $header = file_get_contents("$path/master_panel/layout/header.html");
 $sidebar = file_get_contents("$path/master_panel/layout/sidebar.html");
@@ -18,6 +30,7 @@ $arr = [
 	'header'=>$header,
 	'sidebar'=>$sidebar,
 	'navbar'=>$navbar,
+	'userlist'=>$userlist,
 	'footer'=>$footer,
 ];
 

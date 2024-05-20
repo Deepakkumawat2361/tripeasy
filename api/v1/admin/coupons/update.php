@@ -49,6 +49,7 @@ if(!$status){
 
 
 
+
 if($errors){ 
     echo json_encode(
 			[
@@ -81,6 +82,7 @@ $id   = addslashes($_GET["id"]);
 		$insert['start_date']= addslashes($_POST["start_date"]);
 		$insert['end_date']= addslashes($_POST["end_date"]);
 		$insert['status']= addslashes($_POST["status"]);
+		$insert['user_id']= addslashes($_POST["user_id"]);
 		
 		
 	   array_walk($insert,function (&$v, $k) {$v = "{$k}='{$v}'";});

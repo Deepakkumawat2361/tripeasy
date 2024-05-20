@@ -51,16 +51,14 @@
 								 
                                     <div class="col-md-6">
                                        <div class="mb-3">
-                                          <label class="form-label" for="formrow-firstname-input">
-                                          Code</label>
+                                          <label class="form-label" for="formrow-firstname-input">Code</label>
                                           <input type="text" name="code"  value="" class="form-control" id="formrow-firstname-input" placeholder="Enter Your Code">
                                        </div>
                                     </div>
 									
 									<div class="col-md-6">
                                        <div class="mb-3">
-                                          <label class="form-label" for="formrow-firstname-input">
-                                          Discount Amount</label>
+                                          <label class="form-label" for="formrow-firstname-input">Discount Amount</label>
                                           <input type="number" name="discount_amount"  value="" class="form-control" id="formrow-firstname-input" placeholder="Enter Your Discount Amount">
                                        </div>
                                     </div>
@@ -68,15 +66,16 @@
 									
 									<div class="col-md-6">
                                        <div class="mb-3">
-                                          <label class="form-label" for="formrow-firstname-input">
-                                          Discount Type</label>
-										  <select name="discount_type" class="form-control" id="formrow-firstname-input" >
-										  <option value="">Select Discount Type</option>
-										  <option value="fixed">Fixed</option>
-										  <option value="percentage">Percentage</option>
-										  </select>
-                                          
-                                       </div>
+                                          <label class="form-label" for="formrow-firstname-input">Discount Type</label>
+											<div class="form-group position-relative">
+											  <select name="discount_type" class="form-control ps-5 h-58" id="formrow-firstname-input" >
+											  <option value="">Select Discount Type</option>
+											  <option value="fixed">Fixed</option>
+											  <option value="percentage">Percentage</option>
+											  </select>
+											  <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+											</div>
+									   </div>
                                     </div>
 									
 									<div class="col-md-6">
@@ -102,13 +101,27 @@
                                     </div>
 									<div class="col-md-6">
                                        <div class="mb-3">
-                                          <label class="form-label" for="formrow-firstname-input">
-                                          Status</label>
-                                          <select name="status" class="form-control" id="formrow-firstname-input">
-											<option value="">Select Status</option>
-											<option value="1">Active</option>
-											<option value="2">Inactive</option>
-										  </select>
+                                          <label class="form-label" for="formrow-firstname-input">Status</label>
+										  <div class="form-group position-relative">
+											  <select name="status" class="form-control ps-5 h-58" id="formrow-firstname-input">
+												<option value="">Select Status</option>
+												<option value="1">Active</option>
+												<option value="2">Inactive</option>
+											  </select>
+											  <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+										  </div>
+                                       </div>
+                                    </div>
+									<div class="col-md-6">
+                                       <div class="mb-3">
+                                          <label class="form-label" for="formrow-firstname-input">Users</label>
+										  <div class="form-group position-relative">
+											  <select name="user_id" class="form-control ps-5 h-58" id="formrow-firstname-input">
+												<option value="0">All Users</option>
+												{userlist}
+											  </select>
+											  <i class="ri-list-ordered position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+										  </div>
                                        </div>
                                     </div>
 									
